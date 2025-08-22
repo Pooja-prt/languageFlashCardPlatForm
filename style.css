@@ -1,0 +1,38 @@
+:root { --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --border:#e2e8f0; --shadow:0 10px 25px rgba(15,23,42,.08); }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; background: var(--bg); color: var(--text); }
+header { padding: 20px; text-align: center; }
+header h1 { margin: 0; font-size: 1.4rem; letter-spacing: .3px; }
+.container { max-width: 900px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+.deck { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.progress { font-size: .95rem; color: var(--muted); }
+.card {
+  position: relative; margin: 14px 0; background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 36px; min-height: 160px; display: grid; place-items: center;
+  box-shadow: var(--shadow); cursor: pointer; transition: transform .2s ease;
+}
+.card:hover { transform: translateY(-2px); }
+.term { font-size: 1.35rem; text-align: center; }
+.answer { font-size: 1.15rem; color: var(--muted); text-align: center; display: none; }
+.card.show .answer { display: block; }
+.card.show .term { display: none; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+button {
+  border: 1px solid var(--border); background: #fff; padding: 10px 14px;
+  border-radius: 12px; font-weight: 600; cursor: pointer; box-shadow: var(--shadow);
+}
+button:active { transform: translateY(1px); }
+.secondary { background: #f1f5f9; }
+.danger { background: #fee2e2; }
+.form {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; box-shadow: var(--shadow);
+  display: grid; gap: 12px;
+}
+label { font-size: .9rem; color: var(--muted); }
+input, textarea {
+  width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: #fff; resize: vertical;
+}
+footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 18px 0 28px; }
+.chips { display:flex; gap:8px; flex-wrap:wrap; }
+.chip { padding:6px 10px; border:1px solid var(--border); border-radius:999px; background:#fff; font-size:.85rem; }

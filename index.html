@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LanguageFlashCardPlatForm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>LanguageFlashCardPlatForm</h1>
+  </header>
+
+  <main class="container">
+    <section class="deck">
+      <div class="row">
+        <div class="progress"><span id="counter">1/1</span> · <span id="mode">Term</span></div>
+        <div class="chips" id="deckInfo"></div>
+      </div>
+
+      <div id="card" class="card" title="Click to flip (show/hide answer)">
+        <div class="term" id="term">こんにちは</div>
+        <div class="answer" id="answer">Hello (Japanese)</div>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="secondary">◀ Prev</button>
+        <button id="flipBtn">Flip</button>
+        <button id="nextBtn" class="secondary">Next ▶</button>
+        <button id="shuffleBtn">Shuffle</button>
+        <button id="resetBtn" class="danger">Reset</button>
+      </div>
+    </section>
+
+    <section class="form">
+      <h3>Add a new flashcard</h3>
+      <div class="row">
+        <div style="flex:1; min-width:240px">
+          <label for="termInput">Term / Word</label>
+          <input id="termInput" placeholder="e.g., bonjour" />
+        </div>
+        <div style="flex:2; min-width:260px">
+          <label for="answerInput">Meaning / Translation</label>
+          <textarea id="answerInput" rows="2" placeholder="e.g., hello (French)"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div style="flex:1; min-width:180px">
+          <label for="langInput">Language/Tag (optional)</label>
+          <input id="langInput" placeholder="e.g., FR" />
+        </div>
+        <button id="addBtn">Add Card</button>
+        <button id="exportBtn" class="secondary">Export JSON</button>
+        <input id="importFile" type="file" accept="application/json" style="display:none" />
+        <button id="importBtn" class="secondary">Import JSON</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Tip: Click the card or press <strong>Space</strong> to flip. Use <strong>← / →</strong> to navigate.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
